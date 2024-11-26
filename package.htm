@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hole in One Resort - Packages</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #2E8B57;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #2E8B57;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .package-item {
+            cursor: pointer;
+            color: #2E8B57;
+            font-weight: bold;
+            padding: 10px;
+            border: 1px solid #2E8B57;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .package-item:hover {
+            background-color: #2E8B57;
+            color: white;
+        }
+
+        .package-item:active {
+            background-color: #4CAF50;
+        }
+
+        .package-details {
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+
+        .package-details ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .package-details li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Our Packages</h1>
+    <nav>
+        <a href="index.htm">Home</a>
+        <a href="package.htm">Packages</a>
+        <a href="contact.htm">Contact Us</a>
+    </nav>
+</header>
+
+<section>
+    <h2>Explore Our Exclusive Packages</h2>
+    <ul>
+        <li class="package-item" onclick="showDetails('Five Rounds Package')">
+            Five Rounds Package
+            <div id="details-five-rounds" class="package-details"></div>
+        </li>
+        <li class="package-item" onclick="showDetails('Triple Tee Experience')">
+            Triple Tee Experience
+            <div id="details-triple-tee" class="package-details"></div>
+        </li>
+        <li class="package-item" onclick="showDetails('Luxury Golf Retreats')">
+            Luxury Golf Retreats
+            <div id="details-luxury-retreats" class="package-details"></div>
+        </li>
+    </ul>
+    <img src="second.jpg" alt="Golf Packages">
+</section>
+
+<footer>
+    <p>&copy; 2024 Hole in One Resort. All Rights Reserved.</p>
+</footer>
+
+<script>
+    // Function to display package details below the package name
+    function showDetails(packageName) {
+        let details = '';
+        
+        // Clear any existing details
+        document.querySelectorAll('.package-details').forEach(function(detail) {
+            detail.innerHTML = '';
+        });
+
+        if (packageName === 'Five Rounds Package') {
+            details = `
+                <h4>Details:</h4>
+                <ul>
+                    <li>Five-night full board stay in a luxury suite</li>
+                    <li>Five 18-hole rounds</li>
+                    <li>One guaranteed round on the famous Sea View course</li>
+                    <li>Complimentary digital coaching session</li>
+                </ul>
+            `;
+            document.getElementById('details-five-rounds').innerHTML = details;
+        } else if (packageName === 'Triple Tee Experience') {
+            details = `
+                <h4>Details:</h4>
+                <ul>
+                    <li>Two-night stay in a double room with breakfast</li>
+                    <li>Three 18-hole rounds, including one on the famous Sea View course (if available)</li>
+                    <li>Complimentary buggy hire</li>
+                    <li>20% discount for the pro shop</li>
+                </ul>
+            `;
+            document.getElementById('details-triple-tee').innerHTML = details;
+        } else if (packageName === 'Luxury Golf Retreats') {
+            details = `
+                <h4>Details:</h4>
+                <ul>
+                    <li>Overnight stay with full breakfast</li>
+                    <li>Dinner in any of the resort’s restaurants</li>
+                    <li>Access to courses (charges will apply, excluding the Sea View course)</li>
+                    <li>Complimentary club hire</li>
+                </ul>
+            `;
+            document.getElementById('details-luxury-retreats').innerHTML = details;
+        }
+    }
+</script>
+
+</body>
+</html>

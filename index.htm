@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hole in One Resort - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #2E8B57;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+        }
+        section {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #2E8B57;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Button rollover effect */
+        .nav-button {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #2E8B57;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-button:hover {
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Hole in One Resort!</h1>
+    <nav>
+        <a href="index.htm" class="nav-button" onclick="showAlert('Home')">Home</a>
+        <a href="package.htm" class="nav-button" onclick="showAlert('Packages')">Packages</a>
+        <a href="contact.htm" class="nav-button" onclick="showAlert('Contact Us')">Contact Us</a>
+    </nav>
+</header>
+
+<section>
+    <h2>Experience Luxury & Golf</h2>
+    <p>Discover an exceptional resort offering world-class golf experiences and luxury amenities. Book your stay today!</p>
+    <img src="home.jpeg" alt="Hole in One Resort Home">
+</section>
+
+<footer>
+    <p>&copy; 2024 Hole in One Resort. All Rights Reserved.</p>
+</footer>
+
+<script>
+    // Function to display alert on navigation link click
+    function showAlert(pageName) {
+        alert("You clicked on the " + pageName + " link!");
+    }
+</script>
+
+</body>
+</html>
